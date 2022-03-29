@@ -1,70 +1,29 @@
-html {
-    margin: 0;
+.mat-card {
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+    border-color: #0a66c2
+}
+.mat-card#first-card {
     padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
-body {
-    background-color: lightblue;
+
+div#profile-background {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    z-index: 1;
 }
-.container {
-    position: relative;
+div#profile-background img {
     width: 100%;
-    max-width: 1000px;
-    min-height: 1000px;
-    background-color: #fff;
-    margin: 50px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    border-radius: 32px 32px 0 0;
 }
-.container .leftSide{
-    position: relative;
-    background:  #003147;
-    padding: 40px
-}
-.profileText{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.profileText .imgBx{
-    position: relative;
-    width: 200px;
-    height: 200px;
+
+.profile-image {
     border-radius: 50%;
-    overflow: hidden;
+    width: 152px;
+    height: 152px;
+    margin-top: -110px;
+    z-index: 1;
 }
-.profileText .imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.profileText h2{
-    color: #fff;
-    font-size:1.5em;
-    margin-top:20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.4em;
-}
-.profileText h2 span{
-    font-size: 0.8em;
-    font-weight: 300;
-}
-.container .rightSide{
-    position: relative;
-    background:  #fff;
-    padding: 40px
+div#info-actions {
+    display: flex;
 }

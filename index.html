@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +7,65 @@
 
     <title>Mi Porfolio Web</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
 </head>
  
 <body>
-    <div class="container">
-        <div class="leftSide">
-            <div class="profileText">
-                <div class="imgBx">
-                    <img src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg">
-                </div>
-                <h2>Ingrese nombre<br/><span>Asigne puesto</span></h2>
+    <div class="card mat-card" id="first-card">
+        <div class="profile-background"><img src="https://www.muycomputerpro.com/wp-content/uploads/2018/02/lenguajes-programacion.jpg"></div>
+        <div id="info" style="padding: 16px">
+            <div id="info-img">
+                <img class="profile-image" src="https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg">
+                <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>
             </div>
-        </div>
-        <div class="rightSide"></div>
+            <div id="info-data">
+                <div>
+                    <h1>Franco Andrés Crestodina</h1>
+                    <div id="info-company">Desarrollador .NET en Andreani</div>
+                    <div id="info-contact">
+                        <span>Ciudad Autónoma de Buenos Aires (Argentina)</span>
+                        <span><a href="#">Información de contacto</a></span>
+                    </div>
+                </div>
+                <ul id="info-details">
+                    <li><a href="#">
+                        <img src="data:image/png;base64,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">
+                        <h2>Andreani</h2>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="https://www.frp.utn.edu.ar/info2/wp-content/uploads/2018/08/utn-nacional.jpg">
+                        <h2>Universidad Tecnológica Nacional</h2>
+                        </a></li>
+                </ul>
+            </div>
+            <div id="info-actions">
+                <button type="button" class="btn btn-primary">Tengo interés en</button>
+                <button type="button" class="btn btn-light">Añadir sección</button>
+                <button type="button" class="btn btn-light">Más</button>
+            </div>
+        </div>       
     </div>
 
+    <div class="card mat-card">
+        <div class="card-titles">
+            <h2>Acerca de</h2>
+            <div class="btn-edit" onclick="cambiar_parrafo()">
+                <a href="#" class="btn-right">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <p id="text-acercade">Estudiante de la Tecnicatura Universitaria en Programación en la UTN FRH. Actualmente me desempeño como Desarrollador .NET en Andreani</p>
+        </div>
+        <div>
+            <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none">
+        </div>
+    </div>
+
+    <input type="file" name="file1" onchange="showFile(this)">
+
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin= "anonymous"></script>
 </body>
 </html>
